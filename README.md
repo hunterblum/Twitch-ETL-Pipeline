@@ -4,7 +4,9 @@
 
 ## Team members: 
 -Hunter Blum 
+
 -Ivan Chavez
+
 -Andrew Kim
 
 ## Objective: 
