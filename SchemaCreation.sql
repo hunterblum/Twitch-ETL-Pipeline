@@ -1,4 +1,4 @@
-# DROP DATABASE `igdb`;
+#DROP DATABASE `igdb`;
 CREATE SCHEMA `igdb` ;
 USE igdb;
 
@@ -21,9 +21,10 @@ PRIMARY KEY (game_id)
 
 # Endpoint - Games
 CREATE TABLE genres
-(genre INT,
+(genre_key INT UNSIGNED,
+genre INT,
 game_id INT,
-PRIMARY KEY (genre),
+PRIMARY KEY (genre_key),
 FOREIGN KEY (game_id) REFERENCES games(game_id)
 );
 
@@ -31,15 +32,15 @@ FOREIGN KEY (game_id) REFERENCES games(game_id)
 CREATE TABLE genres_info
 (genre INT,
 genre_name VARCHAR(50),
-PRIMARY KEY (genre),
-FOREIGN KEY (genre) REFERENCES genres(genre)
+PRIMARY KEY (genre)
 );
 
 # Endpoint - Games
 CREATE TABLE keywords
-(keyword INT,
+(keyword_key INT UNSIGNED,
+keyword INT,
 game_id INT,
-PRIMARY KEY (keyword),
+PRIMARY KEY (keyword_key),
 FOREIGN KEY (game_id) REFERENCES games(game_id)
 );
 
@@ -47,15 +48,15 @@ FOREIGN KEY (game_id) REFERENCES games(game_id)
 CREATE TABLE keyword_info
 (keyword INT,
 keyword_name VARCHAR(50),
-PRIMARY KEY (keyword),
-FOREIGN KEY (keyword) REFERENCES keywords(keyword)
+PRIMARY KEY (keyword)
 );
 
 # Endpoint - Game
 CREATE TABLE platforms
-(platform INT,
+(platform_key INT UNSIGNED,
+platform INT,
 game_id INT, 
-PRIMARY KEY (platform),
+PRIMARY KEY (platform_key),
 FOREIGN KEY (game_id) REFERENCES games(game_id)
 );
 
@@ -63,25 +64,10 @@ FOREIGN KEY (game_id) REFERENCES games(game_id)
 CREATE TABLE platform_info
 (platform INT,
 platform_name VARCHAR(20),
-PRIMARY KEY (platform),
-FOREIGN KEY (platform) REFERENCES platforms(platform)
+PRIMARY KEY (platform)
 );
 
-# Endpoint - Games
-CREATE TABLE themes 
-(theme INT, 
-game_id INT,
-PRIMARY KEY (theme),
-FOREIGN KEY (game_id) REFERENCES games(game_id)
-);
 
-# Endpoint - Themes
-CREATE TABLE theme_info
-(theme INT,
-theme_name VARCHAR(20),
-PRIMARY KEY (theme),
-FOREIGN KEY (theme) REFERENCES themes(theme)
-);
 
 
 
@@ -147,6 +133,22 @@ FOREIGN KEY (theme) REFERENCES themes(theme)
 #game_id INT,
 #PRIMARY KEY (mode_id),
 #FOREIGN KEY (game_id) REFERENCES games(game_id)
+#);
+
+# Endpoint - Games
+#CREATE TABLE themes 
+#(theme INT, 
+#game_id INT,
+#PRIMARY KEY (theme),
+#FOREIGN KEY (game_id) REFERENCES games(game_id)
+#);
+
+# Endpoint - Themes
+#CREATE TABLE theme_info
+#(theme INT,
+#theme_name VARCHAR(20),
+#PRIMARY KEY (theme),
+#FOREIGN KEY (theme) REFERENCES themes(theme)
 #);
 
 #CREATE TABLE websites
