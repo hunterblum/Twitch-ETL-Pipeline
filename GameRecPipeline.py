@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # %%
-load_dotenv('.env.txt')
+load_dotenv()
 
 # %%
 auth_url = 'https://id.twitch.tv/oauth2/token'
