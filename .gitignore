@@ -1,3 +1,6 @@
+# Airflow logs
+logs
+
 #Generated HTML and pdf files
 *.html
 *.pdf

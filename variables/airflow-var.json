@@ -1,0 +1,8 @@
+{
+    "CLIENT_ID": "",
+    "CLIENT_SECRET": "",
+    "PASS": "",
+    "RDS_ENDPOINT": "",
+    "RDS_PORT": 3306,
+    "USER": ""
+}
