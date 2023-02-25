@@ -37,16 +37,27 @@ Python through Jupyter Notebook within VS Code, MySQLWorkbench, Amazon Web Servi
 ## Appendix: Description of Elements within each Table
 ### Games Table
 -game_id INT - The primary key for the table.
+
 -name VARCHAR(100) - The name of the video game
+
 -category INT - Is the game the main game, dlc, bundle, etc? Filtered for main games only currently
+
 -first_release_date DATE - The first release date for the title
+
 -status INT - Is the game released, in alpha testing, canceled, etc?
+
 -rating INT - Average IGDB user rating for the game
+
 -rating_count INT - Number of IGDB user ratings for the game
+
 -total_rating INT - Average critic rating for the game
+
 -total_rating_count INT - Number of critic ratings for the game
+
 -aggregated_rating INT - Combined user and critic ratings for the game
+
 -aggregated_rating_count INT - Number of aggregated ratings for the game
+
 
 ### Genres Table
 -genres_id INT - The primary key for the table
