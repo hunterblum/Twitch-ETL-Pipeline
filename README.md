@@ -33,3 +33,45 @@ A schema using MySQL Workbench was created to match the endpoints in the API. Th
 
 ## Programming Language/Technologies: 
 Python through Jupyter Notebook within VS Code, MySQLWorkbench, Amazon Web Services RDS application, Apache Airflow.
+
+## Appendix: Description of Elements within each Table
+### Games Table
+-game_id INT - The primary key for the table.
+-name VARCHAR(100) - The name of the video game
+-category INT - Is the game the main game, dlc, bundle, etc? Filtered for main games only currently
+-first_release_date DATE - The first release date for the title
+-status INT - Is the game released, in alpha testing, canceled, etc?
+-rating INT - Average IGDB user rating for the game
+-rating_count INT - Number of IGDB user ratings for the game
+-total_rating INT - Average critic rating for the game
+-total_rating_count INT - Number of critic ratings for the game
+-aggregated_rating INT - Combined user and critic ratings for the game
+-aggregated_rating_count INT - Number of aggregated ratings for the game
+
+### Genres Table
+-genres_id INT - The primary key for the table
+-game_id INT - A foreign key constraint connected to the games table
+-genre_id INT - The genre code for the game
+
+### Genres_info Table
+-genre_id BIGINT - The genre code for the game
+-genre_name TEXT - The textual name for the genre
+
+### Keywords Table
+-keywords_id INT - The primary key for the table
+-game_id INT - A foreign key constraint connected to the games table
+-keyword_id INT - The keyword code for the game
+
+### Keywords_info Table
+-keyword_id BIGINT - The keyword code for the game
+-keyword_name TEXT - The textual name for the keyword
+
+### Platforms Table
+-platforms_id INT - The primary key for the table
+-game_id INT - A foreign key constraint connected to the games table
+-platform_id INT - The platform code for the game
+
+### Platforms_info Table
+-platform_id BIGINT - The platform code for the game
+-platform_name TEXT - The textual name for the platform
+
