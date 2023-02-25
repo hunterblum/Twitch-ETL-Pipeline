@@ -1,6 +1,4 @@
-# ADS507-Practical-Data-Engineering
-
-# Title: Down the Warp Pipe: Creating an ETL Pipeline for a Video Game Recommendation System
+# Down the Warp Pipe: Creating an ETL Pipeline for a Video Game Recommendation System
 
 ## Team members: 
 -Hunter Blum 
@@ -24,8 +22,14 @@ The data's source came from the IGDB API run by Twitch, which contained over 200
 6.	Keyword Endpoint.
 7.	Platform Endpoint.
 
+## Variable List/Guide:
+
 ## Methods: 
 A schema using MySQL Workbench was created to match the endpoints in the API. The required data from the API was then extracted through Python using Jupyter Notebook within VSCode before the coding process using Jupyter Notebook was cleaned and migrated into a python file to extract the necessary api data into a shared RDS database. Once the data was migrated into a single server, queries that analyzed games that were highly ranked based on key features and were surveyed between users and reviewers were generated.  Visualizations (i.e.: bar charts) in Python were also created to support the queries. Lastly, the process was automated using Apache Airflow.
+
+## (How to deploy pipeline)
+
+## (How to monitor pipeline)
 
 ## Programming Language/Technologies: 
 Python through Jupyter Notebook within VS Code, MySQLWorkbench, Amazon Web Services RDS application, Apache Airflow.
