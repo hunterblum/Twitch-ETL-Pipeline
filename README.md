@@ -35,7 +35,7 @@ A schema using MySQL Workbench was created to match the endpoints in the API. Th
 5. Login using default credentials:
    * Username: airflow
    * Password: airflow
-6. Import project variables more information [here](variables/README.md) 
+6. Import project variables more information [here](variables) 
 7. Click the green play button for **IGDB_PIPELINE** to manually start the pipeline
 
 
