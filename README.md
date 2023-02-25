@@ -1,6 +1,6 @@
 # ADS507-Practical-Data-Engineering
 
-# Title: Down the Warp Pipe
+# Title: Down the Warp Pipe: Creating an ETL Pipeline for a Video Game Recommendation System
 
 ## Team members: 
 -Hunter Blum 
