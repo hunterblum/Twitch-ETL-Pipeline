@@ -22,14 +22,22 @@ The data's source came from the IGDB API run by Twitch, which contained over 200
 6.	Keyword Endpoint.
 7.	Platform Endpoint.
 
-## Variable List/Guide:
-
 ## Methods: 
 A schema using MySQL Workbench was created to match the endpoints in the API. The required data from the API was then extracted through Python using Jupyter Notebook within VSCode before the coding process using Jupyter Notebook was cleaned and migrated into a python file to extract the necessary api data into a shared RDS database. Once the data was migrated into a single server, queries that analyzed games that were highly ranked based on key features and were surveyed between users and reviewers were generated.  Visualizations (i.e.: bar charts) in Python were also created to support the queries. Lastly, the process was automated using Apache Airflow.
 
-## (How to deploy pipeline)
+## How to deploy pipeline
+**Assumes Docker Daemon is running**
+1. Clone repository
+2. Open repository directory in command line or terminal
+3. Run the following command inside the project root: <code> docker-compose up </code>
+<br>*Note: Takes a couple minutes for Airflow to start up*
+5. Access local Airflow instance via default URL (http://localhost:8080/)
+5. Login using default credentials:
+   * Username: airflow
+   * Password: airflow
+6. Import project variables more information [here](variables/README.md) 
+7. Click the green play button for **IGDB_PIPELINE** to manually start the pipeline
 
-## (How to monitor pipeline)
 
 ## Programming Language/Technologies: 
 Python through Jupyter Notebook within VS Code, MySQLWorkbench, Amazon Web Services RDS application, Apache Airflow.
