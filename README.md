@@ -1,5 +1,12 @@
 # Down the Warp Pipe: Creating an ETL Pipeline for a Video Game Recommendation System
 
+## Installation
+To use this project, first clone the repo on your device using the command below:
+```
+git init
+git clone https://github.com/hunterblum/Twitch-ETL-Pipeline.git
+```
+
 ## Team members: 
 -Hunter Blum 
 
